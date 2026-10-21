@@ -39,7 +39,14 @@ if (-not $DryRun -and -not (Get-Command gh -ErrorAction SilentlyContinue)) {
 
 $prefix = "https://github.com/$Repo/releases/download/"
 $releases = [ordered]@{}   # tag -> @{ Files; Title; Notes }
-$latestTag = $null; $latestBuilt = ''
+$latestTag = $null; $latestVersion = [long]0
+
+# PowerShell 7's ConvertFrom-Json turns ISO date strings into DateTime values
+# (5.1 keeps the text), so dates are written back explicitly.
+function DateText($value, [string] $format) {
+  if ($value -is [datetime]) { return $value.ToUniversalTime().ToString($format) }
+  return [string]$value
+}
 
 function Get-ReleaseAssets([string] $tag) {
   # "release not found" on stderr is the normal answer for a new release; under
@@ -71,18 +78,21 @@ foreach ($c in $manifest.countries) {
     if (-not $releases.Contains($tag)) {
       $country = (Get-Culture).TextInfo.ToTitleCase($c.country_slug)
       if ($name -eq 'basemap') {
-        $title = "$country offline map ($($f.built_on))"
-        $notes = "Offline basemap for the HealthScope app: max zoom $($f.maxzoom), OpenStreetMap data of $($f.built_on). " +
+        $builtOn = DateText $f.built_on 'yyyy-MM-dd'
+        $title = "$country offline map ($builtOn)"
+        $notes = "Offline basemap for the HealthScope app: max zoom $($f.maxzoom), OpenStreetMap data of $builtOn. " +
                  "Map data (c) OpenStreetMap contributors, ODbL; tiles built with Protomaps."
       } else {
         $title = "$country data $($c.bundle_version)"
         $notes = "HealthScope Mobile data bundle for $country, version $($c.bundle_version). " +
-                 "ETL source date $($c.etl_source_date), ETL commit $($c.etl_commit), built $($c.built_at)."
+                 "ETL source date $(DateText $c.etl_source_date 'yyyy-MM-dd'), ETL commit $($c.etl_commit), " +
+                 "built $(DateText $c.built_at "yyyy-MM-dd'T'HH:mm:ss'Z'")."
       }
       $releases[$tag] = @{ Files = @(); Title = $title; Notes = $notes }
     }
     $releases[$tag].Files += $local
-    if ($name -eq 'bundle' -and $c.built_at -gt $latestBuilt) { $latestBuilt = $c.built_at; $latestTag = $tag }
+    # bundle_version (YYYYMMDDNN) only grows, so the highest is the newest bundle.
+    if ($name -eq 'bundle' -and [long]$c.bundle_version -gt $latestVersion) { $latestVersion = [long]$c.bundle_version; $latestTag = $tag }
   }
 }
 if ($null -eq $latestTag) { throw "The manifest lists no data bundles." }
