@@ -1,0 +1,70 @@
+code,service_key,in_menus,reference_tier,reference_category,reference_name,notes
+CS001,surveillance_collect_refer,no,1,Disease Surveillance,"Collect,package and refer to higher level (district,regional,zonal and national)",Task for health staff: hidden from menus (decision 2026-10-21)
+CS002,surveillance_presumptive_tests,no,1,Disease Surveillance,Perform laboratory tests for presumptive diagnosis,Task for health staff: hidden from menus (decision 2026-10-21)
+CS003,surveillance_specimen_referral,no,1,Disease Surveillance,Referal of specimen for confirmation and /or profiency testing,Task for health staff: hidden from menus (decision 2026-10-21)
+CS004,emergency_preparedness_basic,yes,1,Emergency Preparedness,Basic Emergency Preparedness,
+CS005,emergency_preparedness_comprehensive,yes,1,Emergency Preparedness,Comprehensive Emergency Preparedness,
+CS006,emergency_care_trauma,yes,1,Emergency Preparedness,Emergency Care and Trauma,
+CS007,mental_health,yes,1,General Clinical Services,Mental Health Services,
+CS008,nutrition_counselling,yes,1,General Clinical Services,Nutritional Counseling,
+CS009,malnutrition_treatment,yes,1,General Clinical Services,Nutritional Rehabilitation,
+CS010,immunization_additional,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-ADD - With Addition Vaccine,
+CS011,immunization_basic,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-BASIC - Basic Immunization,
+CS012,travel_vaccination,yes,1,Growth Monitoring / Nutrition Surveillance,PORT - Port Immunization Services,
+CS013,vaccination,yes,1,Growth Monitoring / Nutrition Surveillance,Vaccination,
+CS014,disease_surveillance,yes,1,Health Promotion and Disease Prevention,Epidemiological Surveillance and Response,
+CS015,malaria_rdt,yes,1,Laboratory Service-Parasitology,Malaria Rapid Diagnostic Test (mRDT),Same Swahili name as CS020
+CS016,dengue_test,yes,1,Laboratory Service-Serology,Dengue Haemorrhagic fever,
+CS017,malaria_treatment,yes,1,Malaria Diagnosis and Treatment,First Line Treatment,
+CS018,malaria_microscopy,yes,1,Malaria Diagnosis and Treatment,Slide Microscopy,
+CS019,severe_malaria_treatment,yes,1,Malaria Diagnosis and Treatment,Treatment of Complicated Malaria,
+CS020,malaria_rdt,yes,1,Malaria Diagnosis and Treatment,mRDT - Rapid Diagnostic Tests,
+CS021,mental_health_case_detection,yes,1,Mental Health and Substance Abuse Services,"Case detection, referral of cases",
+CS022,child_mental_health,yes,1,Mental Health and Substance Abuse Services,"Child, Adolescents behavioral Disorder",
+CS023,mental_health_counselling,yes,1,Mental Health and Substance Abuse Services,Counselling,
+CS024,psychosis_epilepsy_depression,yes,1,Mental Health and Substance Abuse Services,"Psychosis, Epilepsy and Depression",
+CS025,psychosocial_care,yes,1,Mental Health and Substance Abuse Services,Pyscho-Social care and support,
+CS026,self_harm_suicide,yes,1,Mental Health and Substance Abuse Services,Self Harm and Suicide,
+CS027,substance_use_care,yes,1,Mental Health and Substance Abuse Services,Substance Abuse Disorder,
+CS028,mental_health_rehabilitation,yes,1,Mobile Nursing Service,Mental health services rehabilitation,
+CS029,mental_health_rehabilitation,yes,1,Nursing Home,Mental health services rehabilitation,Same name as CS028
+CS030,mental_health_rehabilitation,yes,1,Nursing and Maternity Home Services,Mental health services rehabilitation,Same name as CS028
+CS031,nutrition_counselling,yes,1,Vaccination,Nutritional Counseling,Same name as CS008
+CS032,malnutrition_treatment,yes,1,Vaccination,Nutritional Rehabilitation,Same name as CS009
+CS033,family_planning,yes,2,Maternity home,Family planning services,Family planning filed under maternity homes; same service as CS045 (API guide)
+CS034,antenatal_care,yes,2,Maternity home,Focus ant- natal care,Antenatal care filed under maternity homes; same service as CS042
+CS035,postnatal_care,yes,2,Maternity home,Post natal care,Same Swahili name as CS048
+CS036,family_planning,yes,2,Mobile Nursing Service,Family planning services,Family planning filed under mobile nursing; same service as CS045 (API guide)
+CS037,antenatal_care,yes,2,Mobile Nursing Service,Focus ant- natal care,Antenatal care filed under mobile nursing; same service as CS042
+CS038,postnatal_care,yes,2,Mobile Nursing Service,Post natal care,Same Swahili name as CS048
+CS039,family_planning,yes,2,Nursing and Maternity Home Services,Family planning services,Family planning filed under nursing and maternity homes; same service as CS045 (API guide)
+CS040,antenatal_care,yes,2,Nursing and Maternity Home Services,Focus ant- natal care,Antenatal care filed under nursing and maternity homes; same service as CS042
+CS041,postnatal_care,yes,2,Nursing and Maternity Home Services,Post natal care,Same Swahili name as CS048
+CS042,antenatal_care,yes,2,Reproductive and Child Health Care Services,Antenatal Care,
+CS043,basic_emergency_obstetric_care,yes,2,Reproductive and Child Health Care Services,BEmOC - Basic Emergency Obstetric Care,
+CS044,emergency_obstetric_care,yes,2,Reproductive and Child Health Care Services,CEmOC - Comprehensive Emergency Obstetric Care,
+CS045,family_planning,yes,2,Reproductive and Child Health Care Services,Family Planning,
+CS046,hypertension_pregnancy,yes,2,Reproductive and Child Health Care Services,Management of Hypertensive Pregnancies (Pre-eclampsia),
+CS047,maternal_newborn_care,yes,2,Reproductive and Child Health Care Services,Maternal and Newborn Care,
+CS048,postnatal_care,yes,2,Reproductive and Child Health Care Services,Postnatal Care,
+CS049,laboratory_general,yes,3,Diagnostic Services,Laboratory,
+CS050,imaging_general,yes,3,Diagnostic Services,Radiology Services,
+CS051,dialysis,yes,3,General Clinical Services,Dialysis Services,
+CS052,community_mobilization,yes,3,Health Promotion and Disease Prevention,Community Mobilization,
+CS053,psychosocial_support,yes,3,Health Promotion and Disease Prevention,Psychosocial Support,
+CS054,school_health,yes,3,Health Promotion and Disease Prevention,School Health Intervention,
+CS055,kidney_care,yes,3,Non-Communicable Diseases Care and Treatment,Renal Diseases/Dialysis,
+CS056,environmental_health,yes,3,School Health Intervention,Environmental Health,
+CS057,school_health_support,yes,3,School Health Intervention,Health and Support Services,
+CS058,health_education,yes,3,School Health Intervention,Health education/IEC,
+CS059,community_mobilization,yes,3,Therapeutics,Community Mobilization,Same name as CS052
+CS060,emergency_department,yes,4,General Clinical Services,EMD - Emergency Services,
+CS061,intensive_care,yes,4,General Clinical Services,ICU - Intensive Care Services,
+CS062,growth_monitoring,yes,4,Maternity home,Growth monitoring,
+CS063,growth_monitoring,yes,4,Mobile Nursing Service,Growth monitoring,Same name as CS062
+CS064,growth_monitoring,yes,4,Nursing and Maternity Home Services,Growth monitoring,Same name as CS062
+CS065,dentures,yes,5,Oral Health Service (Dental Services),Dental Laboratory Services (Prosthesis),
+CS066,dental_emergency,yes,5,Oral Health Service (Dental Services),Emergency Dental Services,
+CS067,dental_fillings,yes,5,Oral Health Service (Dental Services),Restoration,
+CS068,dental_scaling,yes,5,Oral Health Service (Dental Services),Scaling,
+CS069,dental_surgery,yes,5,Oral Health Service (Dental Services),Surgical Intervetion,

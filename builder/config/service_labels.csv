@@ -1,0 +1,197 @@
+public_key,public_domain_key,label_en,label_sw,sw_status,show_public,review_flag,sort_order,notes
+malaria_rdt,malaria,Malaria rapid test (mRDT),,NEEDS_TRANSLATION,yes,,10,Merges the Malaria-group and Laboratory-group mRDT entries
+malaria_microscopy,malaria,Malaria test by microscope (blood slide),,NEEDS_TRANSLATION,yes,,20,
+malaria_treatment,malaria,Malaria treatment (uncomplicated malaria),,NEEDS_TRANSLATION,yes,,30,ETL name: First Line Treatment
+severe_malaria_treatment,malaria,Treatment of severe (complicated) malaria,,NEEDS_TRANSLATION,yes,,40,
+outpatient,general,Outpatient care (OPD),,NEEDS_TRANSLATION,yes,,10,
+inpatient,general,Inpatient care (admission),,NEEDS_TRANSLATION,yes,,20,
+sick_child_care,general,Care for sick children under 5 (IMCI),,NEEDS_TRANSLATION,yes,,30,
+minor_surgery,general,Minor surgery,,NEEDS_TRANSLATION,yes,,40,
+major_surgery,general,Major surgery (operations),,NEEDS_TRANSLATION,yes,,50,
+diabetes_care,general,Diabetes care and treatment,,NEEDS_TRANSLATION,yes,,60,
+chronic_disease_care,general,Care for other long-term illnesses (NCDs),,NEEDS_TRANSLATION,yes,,70,ETL name: NCD - Other Non-Communicable Disease
+mental_health,general,Mental health services,,NEEDS_TRANSLATION,yes,,80,
+psychosocial_support,general,Psychosocial support and counselling,,NEEDS_TRANSLATION,yes,,85,
+eye_care,eye,Eye care,,NEEDS_TRANSLATION,yes,,90,ETL name: General Ophthalmology; moved to the eye domain 2026-10-18
+ent_care,general,"Ear, nose and throat (ENT) care",,NEEDS_TRANSLATION,yes,,100,Merges ENT Services and General ENT
+hearing_care,general,Hearing tests and care (audiology),,NEEDS_TRANSLATION,yes,,110,
+head_neck_surgery,general,Head and neck surgery,,NEEDS_TRANSLATION,yes,,120,
+physiotherapy,general,Physiotherapy,,NEEDS_TRANSLATION,yes,,130,
+breast_cancer,general,Breast cancer services,,NEEDS_TRANSLATION,yes,,150,1 facility in Tanzania
+prostate_cancer,general,Prostate cancer services,,NEEDS_TRANSLATION,yes,,160,1 facility in Tanzania
+violence_survivor_care,general,"Care for survivors of violence, including sexual violence",,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,170,Merges GBV PEP / GBV trauma counselling / VAC PEP / VAC trauma counselling (VAC = violence against children). 1 facility in Tanzania. Confirm wording.
+emergency_care,emergency,Emergency care,,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,10,Merges Basic Emergency Preparedness / Comprehensive Emergency Preparedness / Emergency Care and Trauma. ETL names describe preparedness levels; confirm that 'Emergency care' is a fair public label.
+antenatal_care,maternal,Antenatal care (pregnancy check-ups),,NEEDS_TRANSLATION,yes,,10,Only 1 Tanzania facility reports this directly. See pmtct_anc.
+maternal_newborn_care,maternal,Maternal and newborn care,,NEEDS_TRANSLATION,yes,,20,1 facility in Tanzania
+emergency_obstetric_care,maternal,Emergency care in pregnancy and childbirth (CEmOC),,NEEDS_TRANSLATION,yes,,30,1 facility in Tanzania
+hypertension_pregnancy,maternal,Care for high blood pressure in pregnancy,,NEEDS_TRANSLATION,yes,,40,1 facility in Tanzania
+postnatal_care,maternal,Postnatal care (after birth),,NEEDS_TRANSLATION,yes,,50,1 facility in Tanzania
+family_planning,maternal,Family planning,,NEEDS_TRANSLATION,yes,,60,Merges Family Planning and FP-NONINV (non-invasive methods)
+family_planning_long_acting,maternal,"Family planning: implants, IUD or permanent methods",,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,70,ETL name: FP-INV - Invasive Method. Confirm which methods this covers.
+emergency_contraception,maternal,Emergency contraception,,NEEDS_TRANSLATION,yes,,80,
+post_abortion_care,maternal,Post-abortion care,,NEEDS_TRANSLATION,yes,,90,
+youth_reproductive_health,maternal,Youth-friendly reproductive health services,,NEEDS_TRANSLATION,yes,,100,
+cervical_cancer,maternal,Cervical cancer services,,NEEDS_TRANSLATION,yes,,110,
+reproductive_cancer_screening,maternal,Reproductive cancer screening,,NEEDS_TRANSLATION,yes,,120,
+unclear_time_sexual_intercourse,maternal,(unclear source entry),,NOT_REQUIRED,no,,900,ETL needs_review = TRUE ('Time sexual intercourse'); meaning unknown
+vaccination,child_prevention,Vaccination (immunisation),,NEEDS_TRANSLATION,yes,,10,Merges Vaccination / IMM-BASIC / IMM-ADD
+travel_vaccination,child_prevention,Travel vaccinations (port health),,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,20,ETL name: PORT - Port Immunization Services. Confirm meaning.
+nutrition_counselling,child_prevention,Nutrition counselling,,NEEDS_TRANSLATION,yes,,30,
+malnutrition_treatment,child_prevention,Treatment of malnutrition (nutrition rehabilitation),,NEEDS_TRANSLATION,yes,,40,
+school_health,child_prevention,School health services,,NOT_REQUIRED,no,PRODUCT_REVIEW,900,Outreach programme rather than a service people visit for
+community_mobilization,child_prevention,Community mobilisation,,NOT_REQUIRED,no,PRODUCT_REVIEW,900,Outreach programme rather than a service people visit for
+disease_surveillance,child_prevention,Disease surveillance and response,,NOT_REQUIRED,no,,900,Internal public-health function
+health_promoting_hospital,child_prevention,Health-promoting hospital initiative,,NOT_REQUIRED,no,,900,Internal programme
+unclear_councelling,child_prevention,(unclear source entry),,NOT_REQUIRED,no,,900,ETL needs_review = TRUE ('Councelling'); 1 facility
+hiv_testing,hiv,HIV testing and counselling,,NEEDS_TRANSLATION,yes,,10,Merges VCT / PITC / DCT / HIV Rapid Test
+hiv_care_treatment,hiv,HIV care and treatment (ART),,NEEDS_TRANSLATION,yes,,20,Merges 'HIV/AIDS Care and Treatment' and 'Both Adult and Pediatric'
+hiv_art_adults,hiv,HIV treatment (ART) for adults,,NEEDS_TRANSLATION,yes,,30,ETL name: Adult ART - Adult ART Only
+hiv_art_children,hiv,HIV treatment (ART) for children,,NEEDS_TRANSLATION,yes,,40,ETL name: Ped ART - Pediatric ART Only
+hiv_home_care,hiv,Home-based care for people living with HIV,,NEEDS_TRANSLATION,yes,,50,
+hiv_infant_test,hiv,HIV testing for babies (early infant diagnosis),,NEEDS_TRANSLATION,yes,,60,Merges EID and DBS for HEID
+pmtct_anc,hiv,Prevention of mother-to-child HIV transmission (antenatal clinic),,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,70,6853 Tanzania facilities. OPEN QUESTION: may this also be shown as 'Antenatal care'? Needs clinical sign-off before any remapping.
+pmtct_maternity,hiv,Prevention of mother-to-child HIV transmission (maternity),,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,80,5555 Tanzania facilities. OPEN QUESTION: may this also be shown as 'Delivery / maternity services'? Needs clinical sign-off.
+hiv_pep,hiv,HIV post-exposure prophylaxis (PEP),,NEEDS_TRANSLATION,yes,,90,
+hiv_prep,hiv,HIV pre-exposure prophylaxis (PrEP),,NEEDS_TRANSLATION,yes,,100,
+sti_treatment,hiv,Treatment of sexually transmitted infections (STIs),,NEEDS_TRANSLATION,yes,,110,
+vmmc,hiv,Voluntary medical male circumcision (VMMC),,NEEDS_TRANSLATION,yes,,120,
+infant_circumcision,hiv,Early infant male circumcision,,NEEDS_TRANSLATION,yes,,130,
+laboratory_general,lab,Laboratory services (general),,NEEDS_TRANSLATION,yes,,10,
+blood_sugar_test,lab,Blood sugar (glucose) test,,NEEDS_TRANSLATION,yes,,20,
+hba1c_test,lab,HbA1c test (long-term blood sugar),,NEEDS_TRANSLATION,yes,,30,
+pregnancy_test,lab,Pregnancy test (urine),,NEEDS_TRANSLATION,yes,,40,ETL name: UPT
+urine_test,lab,Urine test (urinalysis),,NEEDS_TRANSLATION,yes,,50,Merges Urine Chemistry / Urine Analysis / Urine sedimentation
+stool_test,lab,Stool test,,NEEDS_TRANSLATION,yes,,60,Merges stool analysis / sedimentation / concentration / formal ether / Kato-Katz
+occult_blood_test,lab,Test for hidden blood in stool (occult blood),,NEEDS_TRANSLATION,yes,,70,
+blood_film_parasites,lab,Blood film for parasites,,NEEDS_TRANSLATION,yes,,80,Merges 'Blood Smear for Haemoparasites' and 'Blood film for haemoparasites'
+hiv_viral_load,lab,HIV viral load test,,NEEDS_TRANSLATION,yes,,90,
+syphilis_test,lab,Syphilis test,,NEEDS_TRANSLATION,yes,,100,Merges RPR/VDRL / TPHA/TPPA / antibody kits
+hepatitis_b_test,lab,Hepatitis B test,,NEEDS_TRANSLATION,yes,,110,
+hepatitis_c_test,lab,Hepatitis C test,,NEEDS_TRANSLATION,yes,,120,ETL name says 'Surface Antigen'; label kept neutral
+hepatitis_bc_screening,lab,Hepatitis B and C screening,,NEEDS_TRANSLATION,yes,,125,1 facility in Tanzania
+typhoid_test,lab,Typhoid test (Widal),,NEEDS_TRANSLATION,yes,,130,
+brucellosis_test,lab,Brucellosis test,,NEEDS_TRANSLATION,yes,,140,
+h_pylori_test,lab,H. pylori test (stomach ulcers),,NEEDS_TRANSLATION,yes,,150,
+dengue_test,lab,Dengue test,,NEEDS_TRANSLATION,yes,,160,
+tb_genexpert,lab,TB test (GeneXpert),,NEEDS_TRANSLATION,yes,,170,ETL name: Xpert-MTB/RIF. 4 facilities.
+cryptococcal_antigen_test,lab,Cryptococcal antigen test,,NEEDS_TRANSLATION,yes,,180,
+liver_function_test,lab,Liver function tests,,NEEDS_TRANSLATION,yes,,190,
+kidney_function_test,lab,Kidney function tests,,NEEDS_TRANSLATION,yes,,200,Merges 'Renal Function Test' and 'Renal Function Tests'
+lipid_profile_test,lab,Cholesterol test (lipid profile),,NEEDS_TRANSLATION,yes,,210,
+electrolytes_test,lab,Electrolytes test,,NEEDS_TRANSLATION,yes,,220,
+uric_acid_test,lab,Uric acid test,,NEEDS_TRANSLATION,yes,,230,
+crp_test,lab,CRP test (inflammation),,NEEDS_TRANSLATION,yes,,240,
+cardiac_test,lab,Heart blood tests (cardiac profile),,NEEDS_TRANSLATION,yes,,250,
+amylase_test,lab,Amylase test,,NEEDS_TRANSLATION,yes,,260,
+blood_gas_test,lab,Blood gas analysis,,NEEDS_TRANSLATION,yes,,270,
+protein_electrophoresis,lab,Protein electrophoresis,,NEEDS_TRANSLATION,yes,,280,
+rheumatoid_test,lab,Rheumatoid factor test,,NEEDS_TRANSLATION,yes,,290,
+asot_test,lab,ASOT test (streptococcal infection),,NEEDS_TRANSLATION,yes,,300,
+chlamydia_test,lab,Chlamydia test,,NEEDS_TRANSLATION,yes,,310,
+hpv_test,lab,HPV test,,NEEDS_TRANSLATION,yes,,320,Merges two spellings of Human Papilloma Virus
+psa_test,lab,PSA test (prostate),,NEEDS_TRANSLATION,yes,,330,
+hormone_tests,lab,Hormone tests,,NEEDS_TRANSLATION,yes,,340,
+tumour_markers,lab,Tumour marker tests,,NEEDS_TRANSLATION,yes,,350,
+sickle_cell_test,lab,Sickle cell test,,NEEDS_TRANSLATION,yes,,360,1 facility in Tanzania
+onchocerciasis_test,lab,River blindness test (skin snip),,NEEDS_TRANSLATION,yes,,370,
+lab_rapid_tests_generic,lab,Rapid tests (unspecified),,NOT_REQUIRED,no,PRODUCT_REVIEW,900,Too generic to help a member of the public
+lab_serological_generic,lab,Serological test (unspecified),,NOT_REQUIRED,no,PRODUCT_REVIEW,900,Too generic
+lab_pcr_generic,lab,PCR (unspecified),,NOT_REQUIRED,no,PRODUCT_REVIEW,900,Too generic
+lab_protein_kits,lab,Protein (commercial kits),,NOT_REQUIRED,no,,900,Lab method / commodity
+lab_enzyme_kits,lab,Enzyme commercial kits,,NOT_REQUIRED,no,,900,Lab commodity
+lab_antibody_identification,lab,Antibody identification methods,,NOT_REQUIRED,no,,900,Lab method; 1 facility
+imaging_general,imaging,Imaging and radiology (general),,NEEDS_TRANSLATION,yes,,10,
+xray,imaging,X-ray,,NEEDS_TRANSLATION,yes,,20,Merges 'General radiography services' and 'X-Ray'
+ultrasound,imaging,Ultrasound,,NEEDS_TRANSLATION,yes,,30,
+ct_scan,imaging,CT scan,,NEEDS_TRANSLATION,yes,,40,
+mri,imaging,MRI scan,,NEEDS_TRANSLATION,yes,,50,
+mammography,imaging,Mammography (breast X-ray),,NEEDS_TRANSLATION,yes,,60,
+fluoroscopy,imaging,Fluoroscopy,,NEEDS_TRANSLATION,yes,,70,
+interventional_radiology,imaging,Interventional radiology,,NEEDS_TRANSLATION,yes,,80,
+bone_density_scan,imaging,Bone density scan (DEXA),,NEEDS_TRANSLATION,yes,,90,
+nuclear_medicine,imaging,Nuclear medicine,,NEEDS_TRANSLATION,yes,,100,
+radiotherapy,imaging,Radiotherapy (cancer treatment),,NEEDS_TRANSLATION,yes,,110,
+dental_services,imaging,Dental services,,NEEDS_TRANSLATION,yes,CLINICAL_REVIEW,120,ETL lists this under Radiology Services; it may mean dental X-ray only
+theatre_radiography,imaging,Theatre radiography,,NOT_REQUIRED,no,,900,Used inside operating theatres; not a public service
+pharmacy,other,Pharmacy,,NEEDS_TRANSLATION,yes,,10,ETL include_in_analysis = FALSE; shown per ADR 001
+mortuary,other,Mortuary services,,NEEDS_TRANSLATION,yes,,20,ETL include_in_analysis = FALSE; shown per ADR 001
+dispensing_room,other,Dispensing room,,NOT_REQUIRED,no,,900,Infrastructure; see ADR 001
+kitchen,other,Kitchen,,NOT_REQUIRED,no,,900,Infrastructure
+toilets,other,Toilets,,NOT_REQUIRED,no,,900,Infrastructure; merges all toilet and latrine entries
+store_room,other,Store room,,NOT_REQUIRED,no,,900,Infrastructure
+parking,other,Parking,,NOT_REQUIRED,no,,900,Infrastructure
+office_in_charge,other,Office for in-charge officer,,NOT_REQUIRED,no,,900,Infrastructure
+incinerator,other,Incinerator,,NOT_REQUIRED,no,,900,Infrastructure
+security,other,Security services,,NOT_REQUIRED,no,,900,Infrastructure
+laundry,other,Laundry,,NOT_REQUIRED,no,,900,Infrastructure
+placenta_pit,other,Placenta pit,,NOT_REQUIRED,no,,900,Infrastructure
+waste_storage,other,Waste storage bay,,NOT_REQUIRED,no,,900,Infrastructure
+wash_slab,other,Wash slab,,NOT_REQUIRED,no,,900,Infrastructure
+ash_pit,other,Ash pit,,NOT_REQUIRED,no,,900,Infrastructure
+basic_emergency_obstetric_care,maternal,Basic emergency care in pregnancy and childbirth (BEmOC),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,910,Added 2026-10-18 for the HFR source; check the label
+fertility_treatment,maternal,Fertility treatment (IVF and assisted reproduction),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,920,Added 2026-10-18 for the HFR source; check the label
+birth_preparedness,maternal,Birth preparedness,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,930,Added 2026-10-18 for the HFR source; check the label
+asthma_care,general,Asthma care,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,180,Added 2026-10-18 for the HFR source; check the label
+heart_disease_care,general,Care for high blood pressure and heart disease,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,190,Added 2026-10-18 for the HFR source; check the label
+copd_care,general,Care for chronic lung disease (COPD),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,200,Added 2026-10-18 for the HFR source; check the label
+rheumatism_care,general,Care for rheumatism and joint disease,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,210,Added 2026-10-18 for the HFR source; check the label
+genetic_disease_care,general,Care for genetic diseases,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,220,Added 2026-10-18 for the HFR source; check the label
+kidney_care,general,Kidney disease care and dialysis,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,230,Added 2026-10-18 for the HFR source; check the label
+cancer_care,general,Cancer care,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,240,Added 2026-10-18 for the HFR source; check the label
+ncd_screening,general,Screening for long-term illnesses (NCDs),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,250,Added 2026-10-18 for the HFR source; check the label
+cancer_screening,general,Cancer screening,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,260,Added 2026-10-18 for the HFR source; check the label
+ecg,general,ECG (heart tracing),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,270,Added 2026-10-18 for the HFR source; check the label
+cardiac_catheterisation,general,Cardiac catheterisation (cath lab),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,280,Added 2026-10-18 for the HFR source; check the label
+kidney_transplant,general,Kidney transplant,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,290,Added 2026-10-18 for the HFR source; check the label
+intensive_care,general,Intensive care (ICU),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,300,Added 2026-10-18 for the HFR source; check the label
+eeg,general,EEG (brain tracing),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,310,Added 2026-10-18 for the HFR source; check the label
+child_mental_health,general,Mental health care for children and adolescents,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,320,Added 2026-10-18 for the HFR source; check the label
+substance_use_care,general,Care for alcohol and drug use,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,330,Added 2026-10-18 for the HFR source; check the label
+wound_care,general,Treatment of minor wounds,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,340,Added 2026-10-18 for the HFR source; check the label
+home_based_care,general,Home-based care and home visits,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,350,Added 2026-10-18 for the HFR source; check the label
+elderly_care,general,Care for older people,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,360,Added 2026-10-18 for the HFR source; check the label
+palliative_care,general,Hospice and palliative care,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,370,Added 2026-10-18 for the HFR source; check the label
+occupational_health,general,Occupational health,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,380,Added 2026-10-18 for the HFR source; check the label
+occupational_therapy,general,Occupational therapy,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,390,Added 2026-10-18 for the HFR source; check the label
+speech_therapy,general,Speech and language therapy,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,400,Added 2026-10-18 for the HFR source; check the label
+prosthetics,general,Artificial limbs (prosthetics),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,410,Added 2026-10-18 for the HFR source; check the label
+medical_devices,general,Medical devices (for example neck collars),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,420,Added 2026-10-18 for the HFR source; check the label
+ambulance,emergency,Ambulance service,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,20,Added 2026-10-18 for the HFR source; check the label
+growth_monitoring,child_prevention,Child growth monitoring,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,910,Added 2026-10-18 for the HFR source; check the label
+tb_treatment,tb,TB treatment,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,10,Added 2026-10-18 for the HFR source; check the label
+tb_mdr_treatment,tb,Treatment for drug-resistant TB,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,20,Added 2026-10-18 for the HFR source; check the label
+tb_smear_test,tb,TB sputum test (microscopy),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,30,Added 2026-10-18 for the HFR source; check the label
+tb_culture,tb,TB culture test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,40,Added 2026-10-18 for the HFR source; check the label
+skin_smear_test,tb,Skin smear test (leprosy),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,50,Added 2026-10-18 for the HFR source; check the label
+dental_emergency,dental,Emergency dental care,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,10,Added 2026-10-18 for the HFR source; check the label
+dental_scaling,dental,Teeth cleaning (scaling),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,20,Added 2026-10-18 for the HFR source; check the label
+dental_fillings,dental,Fillings (restoration),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,30,Added 2026-10-18 for the HFR source; check the label
+dental_surgery,dental,Dental surgery,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,40,Added 2026-10-18 for the HFR source; check the label
+dentures,dental,Dentures and dental prostheses,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,50,Added 2026-10-18 for the HFR source; check the label
+eye_exam,eye,Eye examination and eye tests,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,10,Added 2026-10-18 for the HFR source; check the label
+eye_surgery,eye,Eye surgery and refractive care,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,20,Added 2026-10-18 for the HFR source; check the label
+spectacles,eye,Glasses (spectacles),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,30,Added 2026-10-18 for the HFR source; check the label
+echocardiogram,imaging,Echocardiogram (heart ultrasound),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,910,Added 2026-10-18 for the HFR source; check the label
+blood_group_test,lab,Blood group test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,910,Added 2026-10-18 for the HFR source; check the label
+haemoglobin_test,lab,Haemoglobin (Hb) test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,920,Added 2026-10-18 for the HFR source; check the label
+full_blood_count,lab,Full blood count,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,930,Added 2026-10-18 for the HFR source; check the label
+blood_crossmatch,lab,Blood cross-matching (for transfusion),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,940,Added 2026-10-18 for the HFR source; check the label
+blood_collection,lab,Blood collection and storage,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,950,Added 2026-10-18 for the HFR source; check the label
+clotting_tests,lab,Bleeding and clotting tests,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,960,Added 2026-10-18 for the HFR source; check the label
+cd4_test,lab,CD4 count (HIV),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,970,Added 2026-10-18 for the HFR source; check the label
+g6pd_test,lab,G6PD test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,980,Added 2026-10-18 for the HFR source; check the label
+hb_electrophoresis,lab,Haemoglobin electrophoresis,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,990,Added 2026-10-18 for the HFR source; check the label
+coombs_test,lab,Coombs test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1000,Added 2026-10-18 for the HFR source; check the label
+culture_test,lab,Culture and sensitivity test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1010,Added 2026-10-18 for the HFR source; check the label
+swab_test,lab,Swab tests,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1020,Added 2026-10-18 for the HFR source; check the label
+semen_analysis,lab,Semen analysis,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1030,Added 2026-10-18 for the HFR source; check the label
+fungal_test,lab,Fungal infection test,,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1040,Added 2026-10-18 for the HFR source; check the label
+pap_smear,lab,Pap smear (cervical screening),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1050,Added 2026-10-18 for the HFR source; check the label
+histopathology,lab,Biopsy and tissue tests (histopathology),,NEEDS_TRANSLATION,yes,PRODUCT_REVIEW,1060,Added 2026-10-18 for the HFR source; check the label
+health_education,other,Health education,,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,910,Added 2026-10-18 for the HFR source; check the label
+environmental_health,other,Environmental health,,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,920,Added 2026-10-18 for the HFR source; check the label
+ehealth,other,eHealth and telemedicine,,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,930,Added 2026-10-18 for the HFR source; check the label
+hfr_other_info,other,Service area and population (registry note),,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,940,Added 2026-10-18 for the HFR source; check the label
+lab_internal,lab,Laboratory reagents and internal methods,,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,1070,Added 2026-10-18 for the HFR source; check the label
+unclear_hfr_entry,other,(unclear source entry),,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,950,Added 2026-10-18 for the HFR source; check the label
+mobile_nursing,other,Mobile nursing services,,NEEDS_TRANSLATION,no,PRODUCT_REVIEW,960,Added 2026-10-18 for the HFR source; check the label

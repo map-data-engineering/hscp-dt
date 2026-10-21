@@ -1,0 +1,51 @@
+country_iso3,etl_facility_type,type_key,label_en,label_sw,sw_status,sort_order,notes
+TZA,Hospital,hospital,Hospital,Hospitali,DRAFT,10,
+TZA,Health Center,health_centre,Health centre,Kituo cha afya,DRAFT,20,
+TZA,Dispensary,dispensary,Dispensary,Zahanati,DRAFT,30,
+TZA,Clinic,clinic,Clinic,,NEEDS_TRANSLATION,40,
+TZA,Health Laboratory,laboratory,Health laboratory,,NEEDS_TRANSLATION,50,
+TZA,Maternity Home,maternity_home,Maternity home,,NEEDS_TRANSLATION,60,
+TZA,Maternity and Nursing Home,maternity_nursing_home,Maternity and nursing home,,NEEDS_TRANSLATION,70,
+TZA,Nursing Home,nursing_home,Nursing home,,NEEDS_TRANSLATION,80,
+TZA,Physiotherapy Clinic,physiotherapy_clinic,Physiotherapy clinic,,NEEDS_TRANSLATION,90,
+TZA,Optical Facility,optical,Optical facility,,NEEDS_TRANSLATION,100,
+TZA,speech and language therapy clinic,speech_therapy_clinic,Speech and language therapy clinic,,NEEDS_TRANSLATION,110,
+TZA,Mobile Radiology and Imaging Centre,mobile_imaging,Mobile radiology and imaging centre,,NEEDS_TRANSLATION,120,
+TZA,Ambulance and Air Services,ambulance,Ambulance and air services,,NEEDS_TRANSLATION,130,
+TZA,National Hospital,hospital_national,National hospital,Hospitali ya taifa,DRAFT,1,"HFR facility type, added 2026-10-18"
+TZA,National Super Specialized Hospital,hospital_national_super,National super-specialised hospital,Hospitali ya taifa ya ubingwa wa juu,DRAFT,2,"HFR facility type, added 2026-10-18"
+TZA,Zonal Referral Hospital,hospital_zonal_referral,Zonal referral hospital,Hospitali ya rufaa ya kanda,DRAFT,3,"HFR facility type, added 2026-10-18"
+TZA,Hospital at Zonal Level,hospital_zonal,Hospital at zonal level,Hospitali ya ngazi ya kanda,DRAFT,4,"HFR facility type, added 2026-10-18"
+TZA,Regional Referral Hospital,hospital_regional_referral,Regional referral hospital,Hospitali ya rufaa ya mkoa,DRAFT,5,"HFR facility type, added 2026-10-18"
+TZA,Hospital at Regional Level,hospital_regional,Hospital at regional level,Hospitali ya ngazi ya mkoa,DRAFT,6,"HFR facility type, added 2026-10-18"
+TZA,District Hospital,hospital_district,District hospital,Hospitali ya wilaya,DRAFT,7,"HFR facility type, added 2026-10-18"
+TZA,Hospital at District Level,hospital_district_level,Hospital at district level,Hospitali ya ngazi ya wilaya,DRAFT,8,"HFR facility type, added 2026-10-18"
+TZA,Specialised Hospital (Level II),hospital_specialised,Specialised hospital,Hospitali maalumu,DRAFT,9,"HFR facility type, added 2026-10-18"
+TZA,PolyClinic,polyclinic,Polyclinic,,NEEDS_TRANSLATION,41,"HFR facility type, added 2026-10-18"
+TZA,Specialized Polyclinic,polyclinic_specialised,Specialised polyclinic,,NEEDS_TRANSLATION,42,"HFR facility type, added 2026-10-18"
+TZA,Super Specialized Polyclinic,polyclinic_super,Super-specialised polyclinic,,NEEDS_TRANSLATION,43,"HFR facility type, added 2026-10-18"
+TZA,Medical Clinic,clinic_medical,Medical clinic,Kliniki,DRAFT,44,"HFR facility type, added 2026-10-18"
+TZA,General Clinic,clinic_general,General clinic,Kliniki,DRAFT,45,"HFR facility type, added 2026-10-18"
+TZA,Consultation Clinic,clinic_consultation,Consultation clinic,,NEEDS_TRANSLATION,46,"HFR facility type, added 2026-10-18"
+TZA,Specialised Clinic,clinic_specialised,Specialised clinic,Kliniki maalumu,DRAFT,47,"HFR facility type, added 2026-10-18"
+TZA,Super Specialised Clinic,clinic_super,Super-specialised clinic,,NEEDS_TRANSLATION,48,"HFR facility type, added 2026-10-18"
+TZA,Dialysis Clinic,clinic_dialysis,Dialysis clinic,,NEEDS_TRANSLATION,49,"HFR facility type, added 2026-10-18"
+TZA,Occupational Therapy Clinic,clinic_occupational_therapy,Occupational therapy clinic,,NEEDS_TRANSLATION,91,"HFR facility type, added 2026-10-18"
+TZA,Prosthetics and Orthotics clinic,clinic_prosthetics,Prosthetics and orthotics clinic,,NEEDS_TRANSLATION,92,"HFR facility type, added 2026-10-18"
+TZA,Mobile Medical Clinic,clinic_mobile,Mobile medical clinic,Kliniki inayotembea,DRAFT,93,"HFR facility type, added 2026-10-18"
+TZA,Basic Dental Clinic,dental_basic,Dental clinic,Kliniki ya meno,DRAFT,61,"HFR facility type, added 2026-10-18"
+TZA,Comprehensive Dental Clinic,dental_comprehensive,Comprehensive dental clinic,Kliniki ya meno,DRAFT,62,"HFR facility type, added 2026-10-18"
+TZA,Specialised Dental Clinic,dental_specialised,Specialised dental clinic,Kliniki maalumu ya meno,DRAFT,63,"HFR facility type, added 2026-10-18"
+TZA,Optometry Clinic,optometry_clinic,Optometry clinic,Kliniki ya macho,DRAFT,101,"HFR facility type, added 2026-10-18"
+TZA,Eye Clinic,eye_clinic,Eye clinic,Kliniki ya macho,DRAFT,102,"HFR facility type, added 2026-10-18"
+TZA,Specialised Eye Clinic,eye_clinic_specialised,Specialised eye clinic,Kliniki maalumu ya macho,DRAFT,103,"HFR facility type, added 2026-10-18"
+TZA,Supplying and Distribution unit of Optical,optical_supply,Optical supply and distribution,,NEEDS_TRANSLATION,104,"HFR facility type, added 2026-10-18"
+TZA,Optical Laboratory,optical_lab,Optical laboratory,,NEEDS_TRANSLATION,105,"HFR facility type, added 2026-10-18"
+TZA,Optical Manufacturing Factory,optical_factory,Optical manufacturing,,NEEDS_TRANSLATION,106,"HFR facility type, added 2026-10-18"
+TZA,Level IA2 (Dispensary Laboratory),lab_level_ia2,Laboratory (dispensary level),Maabara,DRAFT,51,"HFR facility type, added 2026-10-18"
+TZA,Level IA1 (Health Center Laboratory),lab_level_ia1,Laboratory (health centre level),Maabara,DRAFT,52,"HFR facility type, added 2026-10-18"
+TZA,Level IIA2 (District Laboratory),lab_level_iia2,Laboratory (district level),Maabara,DRAFT,53,"HFR facility type, added 2026-10-18"
+TZA,Level III Multipurpose Health Laboratory,lab_level_iii_multi,Multipurpose health laboratory,Maabara,DRAFT,54,"HFR facility type, added 2026-10-18"
+TZA,Level III Single purpose Health Laboratory,lab_level_iii_single,Single-purpose health laboratory,Maabara,DRAFT,55,"HFR facility type, added 2026-10-18"
+TZA,Diagnostic Centre,diagnostic_centre,Diagnostic centre,,NEEDS_TRANSLATION,56,"HFR facility type, added 2026-10-18"
+TZA,District Vaccine Store,vaccine_store,District vaccine store,,NEEDS_TRANSLATION,140,"HFR facility type, added 2026-10-18"

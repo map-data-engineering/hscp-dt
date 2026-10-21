@@ -1,0 +1,13 @@
+domain_key,label_en,label_sw,sw_status,sort_order,notes
+malaria,Malaria,,NEEDS_TRANSLATION,10,
+general,General and specialist care,,NEEDS_TRANSLATION,20,
+eye,Eye care and glasses,,NEEDS_TRANSLATION,25,Added 2026-10-18 for the HFR source
+emergency,Emergency care,,NEEDS_TRANSLATION,30,
+maternal,"Pregnancy, family planning and reproductive health",,NEEDS_TRANSLATION,40,
+child_prevention,"Vaccination, nutrition and prevention",,NEEDS_TRANSLATION,50,
+hiv,HIV and sexual health,,NEEDS_TRANSLATION,60,
+tb,TB and leprosy care,,NEEDS_TRANSLATION,65,Added 2026-10-18 for the HFR source
+lab,Laboratory tests,,NEEDS_TRANSLATION,70,
+dental,Dental care,,NEEDS_TRANSLATION,75,Added 2026-10-18 for the HFR source
+imaging,"X-ray, scans and imaging",,NEEDS_TRANSLATION,80,
+other,Pharmacy and other services,,NEEDS_TRANSLATION,90,

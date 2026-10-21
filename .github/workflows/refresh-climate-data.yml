@@ -1,0 +1,106 @@
+# Weekly refresh of the app's Tanzania data from the climate-sensitive
+# facilities API (hfr-pipeline). It lives in the data repository
+# (map-data-engineering/hscp-dt) as .github/workflows/refresh-climate-data.yml,
+# next to a copy of the bundle builder in builder/. Install or update both with
+# bundle-builder/ci/install_to_data_repo.ps1; see bundle-builder/ci/README.md.
+#
+# Every Monday it downloads the API, builds the bundle and, when anything
+# changed since the published one (the manifest's source_checksum: the data,
+# the config files and the builder version), publishes it as the new Latest
+# release. Phones pick it up at their next update check. A failed run
+# publishes nothing, so the previous bundle stays; GitHub emails the failure.
+name: Refresh climate data
+
+on:
+  schedule:
+    - cron: '0 3 * * 1' # Mondays 03:00 UTC, 06:00 in Tanzania
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Publish even if nothing changed
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # create releases; commit status/climate-refresh.json
+
+concurrency:
+  group: refresh-climate-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      CLIMATE_API: https://hfr-pipeline.vercel.app/api/v1/climate
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::readr
+            any::DBI
+            any::RSQLite
+            any::jsonlite
+            any::digest
+            any::curl
+
+      # The published manifest: the builder keeps its offline map entry and
+      # numbers the new bundle after it; its checksum tells whether anything changed.
+      - name: Fetch the published manifest
+        run: |
+          mkdir -p out
+          curl -fsSL -o out/manifest.json "https://github.com/$REPO/releases/latest/download/manifest.json"
+          cp out/manifest.json published-manifest.json
+
+      - name: Build from the climate API
+        run: Rscript builder/build_bundle.R --country TZA --climate-api "$CLIMATE_API" --out out --github-repo "$REPO"
+
+      - name: Compare with the published bundle
+        id: compare
+        run: |
+          tza='.countries[] | select(.country_iso3 == "TZA")'
+          old=$(jq -r "[$tza | .source_checksum // \"\"][0] // \"\"" published-manifest.json)
+          new=$(jq -r "$tza | .source_checksum" out/manifest.json)
+          if [ "$new" = "$old" ] && [ "${{ inputs.force }}" != "true" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing changed since the published bundle; nothing published." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish as the new Latest release
+        if: steps.compare.outputs.changed == 'true'
+        shell: pwsh
+        run: ./builder/publish_github.ps1 -Repo $env:REPO -PublishDir out/publish
+
+      # Also keeps the schedule running: GitHub pauses scheduled workflows in a
+      # public repository after 60 days without a commit.
+      - name: Record this run
+        run: |
+          mkdir -p status
+          if [ "${{ steps.compare.outputs.changed }}" = "true" ]; then manifest=out/manifest.json; else manifest=published-manifest.json; fi
+          jq -n \
+            --arg checked "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --arg changed "${{ steps.compare.outputs.changed }}" \
+            --slurpfile m "$manifest" \
+            --slurpfile r out/tanzania_build_report.json \
+            '($m[0].countries[] | select(.country_iso3 == "TZA")) as $c |
+             {checked_at: $checked, published_now: ($changed == "true"),
+              latest_bundle_version: $c.bundle_version, source_checksum: $c.source_checksum,
+              api_facilities: $r[0].counts.climate_api_facilities, bundle_facilities: $r[0].table_counts.facilities,
+              excluded: $r[0].excluded, warnings: $r[0].warnings}' > status/climate-refresh.json
+          cat status/climate-refresh.json >> "$GITHUB_STEP_SUMMARY"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status/climate-refresh.json
+          git commit -m "Climate data check $(date -u +%Y-%m-%d)" || exit 0
+          git push
