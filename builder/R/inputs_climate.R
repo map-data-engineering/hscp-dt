@@ -20,7 +20,7 @@ CLIMATE_CONFIDENCE <- c(high = "high", medium = "medium", low = "low", unchecked
 # Retry-After header (or a growing pause); the API asks clients to stay well
 # under about 120 requests a minute.
 climate_get <- function(url, tries = 5, pause = Sys.sleep) {
-  handle <- curl::new_handle(useragent = paste0("FastHuduma-bundle-builder/", BUILDER_VERSION), timeout = 90)
+  handle <- curl::new_handle(useragent = paste0("WapiCare-bundle-builder/", BUILDER_VERSION), timeout = 90)
   for (i in seq_len(tries)) {
     r <- tryCatch(curl::curl_fetch_memory(url, handle = handle), error = function(e) NULL)
     status <- if (is.null(r)) 0L else r$status_code
@@ -45,34 +45,61 @@ climate_get <- function(url, tries = 5, pause = Sys.sleep) {
 # Downloads the whole API: the service list in both languages and every
 # facility (English; facility and place names are not translated, and service
 # names in Swahili come from the service list). Returns the snapshot as a list.
+# If the data changes while the facilities are paged through (on 2026-11-05,
+# while the pipeline team was updating it, the total moved between pages and
+# two facilities came twice at page edges while two others were missed), it
+# waits [retry_wait] seconds and downloads the facilities again, at most
+# [tries] times in all.
 fetch_climate_api <- function(base_url = CLIMATE_API_URL, get = climate_get, pause = Sys.sleep, now = Sys.time(),
-                              page_size = CLIMATE_PAGE_SIZE) {
+                              page_size = CLIMATE_PAGE_SIZE, tries = 3L, retry_wait = 120) {
   base_url <- sub("/+$", "", base_url)
   log_msg("Downloading %s", base_url)
   services_en <- get(paste0(base_url, "/services?lang=en"))
   services_sw <- get(paste0(base_url, "/services?lang=sw"))
+  for (try in seq_len(tries)) {
+    got <- fetch_climate_facilities(base_url, get, pause, page_size)
+    if (is.null(got$problem)) break
+    if (try == tries) validation_error(sprintf("%s Tried %d times; run the build again later.", got$problem, tries))
+    log_msg("%s Downloading the facilities again in %d s.", got$problem, as.integer(retry_wait))
+    pause(retry_wait)
+  }
+  facilities <- got$facilities
+  log_msg("Downloaded %d facilities and %d services", length(facilities), length(services_en$data))
+  list(fetched_at = format(now, "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
+       base_url = base_url,
+       attribution = got$attribution %||% services_en$meta$attribution,
+       services_en = services_en$data,
+       services_sw = services_sw$data,
+       facilities = facilities)
+}
+
+# One pass through the facility pages. Returns list(facilities, attribution,
+# problem); problem is NULL when every page gave the same total, no facility
+# came twice and the count matches the total.
+fetch_climate_facilities <- function(base_url, get, pause, page_size) {
   facilities <- list()
-  attribution <- services_en$meta$attribution
+  totals <- numeric(0)
+  attribution <- NULL
   offset <- 0L
   repeat {
     page <- get(sprintf("%s/facilities?limit=%d&offset=%d&lang=en", base_url, page_size, offset))
     facilities <- c(facilities, page$data)
     total <- page$meta$total
+    totals <- c(totals, total)
     attribution <- page$meta$attribution %||% attribution
     offset <- offset + page_size
     if (length(page$data) == 0 || offset >= total) break
     pause(0.5)
   }
-  if (length(facilities) != total)
-    validation_error(sprintf("The climate API listed %d facilities but returned %d; the data may have changed while paging. Run the build again.",
-                             total, length(facilities)))
-  log_msg("Downloaded %d facilities and %d services", length(facilities), length(services_en$data))
-  list(fetched_at = format(now, "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
-       base_url = base_url,
-       attribution = attribution,
-       services_en = services_en$data,
-       services_sw = services_sw$data,
-       facilities = facilities)
+  codes <- vapply(facilities, function(f) str_or_na(f$code), "")
+  problem <- if (length(unique(totals)) > 1) {
+    sprintf("The climate API's facility total changed from %d to %d while paging; the data is being updated.", totals[1], total)
+  } else if (anyDuplicated(codes)) {
+    sprintf("The climate API returned %d facilities twice while paging; the data may be changing.", sum(duplicated(codes)))
+  } else if (length(facilities) != total) {
+    sprintf("The climate API listed %d facilities but returned %d; the data may have changed while paging.", total, length(facilities))
+  }
+  list(facilities = facilities, attribution = attribution, problem = problem)
 }
 
 write_climate_snapshot <- function(snapshot, path) {
@@ -150,7 +177,8 @@ climate_catalogue <- function(snapshot, config_dir) {
 
   unmapped <- setdiff(cat$code, map$code)
   if (length(unmapped))
-    validation_error("Climate API service codes missing from climate_service_map.csv. Add a row for each (a service_key, and in_menus yes or no):",
+    validation_error(paste("Climate API service codes missing from climate_service_map.csv. Add a row for each (a service_key, and in_menus yes or no);",
+                           "a code the API dropped before has its old row in climate_service_map_retired.csv:"),
                      sprintf("%s '%s' (tier %d)", unmapped, cat$name_en[match(unmapped, cat$code)], cat$tier[match(unmapped, cat$code)]))
   untiered <- setdiff(as.character(cat$tier), tiers$tier)
   if (length(untiered)) validation_error("Climate API tiers missing from climate_tiers.csv:", untiered)

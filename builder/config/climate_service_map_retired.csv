@@ -1,0 +1,36 @@
+code,service_key,in_menus,reference_tier,reference_category,reference_name,notes,retired_on
+CS001,surveillance_collect_refer,no,1,Disease Surveillance,"Collect,package and refer to higher level (district,regional,zonal and national)",Task for health staff: hidden from menus (decision 2026-10-21),2026-11-05
+CS002,surveillance_presumptive_tests,no,1,Disease Surveillance,Perform laboratory tests for presumptive diagnosis,Task for health staff: hidden from menus (decision 2026-10-21),2026-11-05
+CS003,surveillance_specimen_referral,no,1,Disease Surveillance,Referal of specimen for confirmation and /or profiency testing,Task for health staff: hidden from menus (decision 2026-10-21),2026-11-05
+CS004,emergency_preparedness_basic,yes,1,Emergency Preparedness,Basic Emergency Preparedness,,2026-11-05
+CS005,emergency_preparedness_comprehensive,yes,1,Emergency Preparedness,Comprehensive Emergency Preparedness,,2026-11-05
+CS008,nutrition_counselling,yes,1,General Clinical Services,Nutritional Counseling,,2026-11-05
+CS009,malnutrition_treatment,yes,1,General Clinical Services,Nutritional Rehabilitation,,2026-11-05
+CS010,immunization_additional,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-ADD - With Addition Vaccine,,2026-11-05
+CS011,immunization_basic,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-BASIC - Basic Immunization,,2026-11-05
+CS012,travel_vaccination,yes,1,Growth Monitoring / Nutrition Surveillance,PORT - Port Immunization Services,,2026-11-05
+CS015,malaria_rdt,yes,1,Laboratory Service-Parasitology,Malaria Rapid Diagnostic Test (mRDT),Same Swahili name as CS020,2026-11-05
+CS017,malaria_treatment,yes,1,Malaria Diagnosis and Treatment,First Line Treatment,,2026-11-05
+CS018,malaria_microscopy,yes,1,Malaria Diagnosis and Treatment,Slide Microscopy,,2026-11-05
+CS020,malaria_rdt,yes,1,Malaria Diagnosis and Treatment,mRDT - Rapid Diagnostic Tests,,2026-11-05
+CS022,child_mental_health,yes,1,Mental Health and Substance Abuse Services,"Child, Adolescents behavioral Disorder",,2026-11-05
+CS023,mental_health_counselling,yes,1,Mental Health and Substance Abuse Services,Counselling,,2026-11-05
+CS024,psychosis_epilepsy_depression,yes,1,Mental Health and Substance Abuse Services,"Psychosis, Epilepsy and Depression",,2026-11-05
+CS025,psychosocial_care,yes,1,Mental Health and Substance Abuse Services,Pyscho-Social care and support,,2026-11-05
+CS026,self_harm_suicide,yes,1,Mental Health and Substance Abuse Services,Self Harm and Suicide,,2026-11-05
+CS027,substance_use_care,yes,1,Mental Health and Substance Abuse Services,Substance Abuse Disorder,,2026-11-05
+CS028,mental_health_rehabilitation,yes,1,Mobile Nursing Service,Mental health services rehabilitation,,2026-11-05
+CS029,mental_health_rehabilitation,yes,1,Nursing Home,Mental health services rehabilitation,Same name as CS028,2026-11-05
+CS030,mental_health_rehabilitation,yes,1,Nursing and Maternity Home Services,Mental health services rehabilitation,Same name as CS028,2026-11-05
+CS031,nutrition_counselling,yes,1,Vaccination,Nutritional Counseling,Same name as CS008,2026-11-05
+CS032,malnutrition_treatment,yes,1,Vaccination,Nutritional Rehabilitation,Same name as CS009,2026-11-05
+CS033,family_planning,yes,2,Maternity home,Family planning services,Family planning filed under maternity homes; same service as CS045 (API guide),2026-11-05
+CS034,antenatal_care,yes,2,Maternity home,Focus ant- natal care,Antenatal care filed under maternity homes; same service as CS042,2026-11-05
+CS035,postnatal_care,yes,2,Maternity home,Post natal care,Same Swahili name as CS048,2026-11-05
+CS036,family_planning,yes,2,Mobile Nursing Service,Family planning services,Family planning filed under mobile nursing; same service as CS045 (API guide),2026-11-05
+CS037,antenatal_care,yes,2,Mobile Nursing Service,Focus ant- natal care,Antenatal care filed under mobile nursing; same service as CS042,2026-11-05
+CS038,postnatal_care,yes,2,Mobile Nursing Service,Post natal care,Same Swahili name as CS048,2026-11-05
+CS039,family_planning,yes,2,Nursing and Maternity Home Services,Family planning services,Family planning filed under nursing and maternity homes; same service as CS045 (API guide),2026-11-05
+CS040,antenatal_care,yes,2,Nursing and Maternity Home Services,Focus ant- natal care,Antenatal care filed under nursing and maternity homes; same service as CS042,2026-11-05
+CS041,postnatal_care,yes,2,Nursing and Maternity Home Services,Post natal care,Same Swahili name as CS048,2026-11-05
+CS045,family_planning,yes,2,Reproductive and Child Health Care Services,Family Planning,,2026-11-05
