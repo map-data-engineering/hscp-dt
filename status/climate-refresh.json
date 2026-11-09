@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-11-05T14:47:46Z",
+  "checked_at": "2026-11-09T10:50:37Z",
   "published_now": true,
-  "latest_bundle_version": 2026110501,
-  "source_checksum": "d7354bd99dc27a4faf0e2487cd89041c68cf9260311f75275d87225cea643f25",
-  "api_facilities": 10568,
-  "bundle_facilities": 9522,
+  "latest_bundle_version": 2026110901,
+  "source_checksum": "18c5a33c90aaebc38950816188c65bf8e177b55dd6d83bcbea7507975d4938b4",
+  "api_facilities": 10524,
+  "bundle_facilities": 9482,
   "excluded": {
     "facilities_without_region": 21,
-    "service_rows_excluded_tier": 19964,
-    "facilities_without_included_tier": 1025,
+    "service_rows_excluded_tier": 19870,
+    "facilities_without_included_tier": 1021,
     "facilities_without_uid": 0,
     "service_rows_duplicate_after_mapping": 0
   },
