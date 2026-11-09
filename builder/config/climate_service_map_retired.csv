@@ -9,6 +9,7 @@ CS009,malnutrition_treatment,yes,1,General Clinical Services,Nutritional Rehabil
 CS010,immunization_additional,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-ADD - With Addition Vaccine,,2026-11-05
 CS011,immunization_basic,yes,1,Growth Monitoring / Nutrition Surveillance,IMM-BASIC - Basic Immunization,,2026-11-05
 CS012,travel_vaccination,yes,1,Growth Monitoring / Nutrition Surveillance,PORT - Port Immunization Services,,2026-11-05
+CS013,vaccination,yes,1,Growth Monitoring / Nutrition Surveillance,Vaccination,,2026-11-09
 CS015,malaria_rdt,yes,1,Laboratory Service-Parasitology,Malaria Rapid Diagnostic Test (mRDT),Same Swahili name as CS020,2026-11-05
 CS017,malaria_treatment,yes,1,Malaria Diagnosis and Treatment,First Line Treatment,,2026-11-05
 CS018,malaria_microscopy,yes,1,Malaria Diagnosis and Treatment,Slide Microscopy,,2026-11-05
@@ -33,4 +34,28 @@ CS038,postnatal_care,yes,2,Mobile Nursing Service,Post natal care,Same Swahili n
 CS039,family_planning,yes,2,Nursing and Maternity Home Services,Family planning services,Family planning filed under nursing and maternity homes; same service as CS045 (API guide),2026-11-05
 CS040,antenatal_care,yes,2,Nursing and Maternity Home Services,Focus ant- natal care,Antenatal care filed under nursing and maternity homes; same service as CS042,2026-11-05
 CS041,postnatal_care,yes,2,Nursing and Maternity Home Services,Post natal care,Same Swahili name as CS048,2026-11-05
+CS042,antenatal_care,yes,2,Reproductive and Child Health Care Services,Antenatal Care,,2026-11-09
+CS043,basic_emergency_obstetric_care,yes,2,Reproductive and Child Health Care Services,BEmOC - Basic Emergency Obstetric Care,,2026-11-09
 CS045,family_planning,yes,2,Reproductive and Child Health Care Services,Family Planning,,2026-11-05
+CS048,postnatal_care,yes,2,Reproductive and Child Health Care Services,Postnatal Care,,2026-11-09
+CS049,laboratory_general,yes,3,Diagnostic Services,Laboratory,,2026-11-09
+CS050,imaging_general,yes,3,Diagnostic Services,Radiology Services,,2026-11-09
+CS051,dialysis,yes,3,General Clinical Services,Dialysis Services,,2026-11-09
+CS052,community_mobilization,yes,3,Health Promotion and Disease Prevention,Community Mobilization,,2026-11-09
+CS053,psychosocial_support,yes,3,Health Promotion and Disease Prevention,Psychosocial Support,,2026-11-09
+CS054,school_health,yes,3,Health Promotion and Disease Prevention,School Health Intervention,,2026-11-09
+CS055,kidney_care,yes,3,Non-Communicable Diseases Care and Treatment,Renal Diseases/Dialysis,,2026-11-09
+CS056,environmental_health,yes,3,School Health Intervention,Environmental Health,,2026-11-09
+CS057,school_health_support,yes,3,School Health Intervention,Health and Support Services,,2026-11-09
+CS058,health_education,yes,3,School Health Intervention,Health education/IEC,,2026-11-09
+CS059,community_mobilization,yes,3,Therapeutics,Community Mobilization,Same name as CS052,2026-11-09
+CS060,emergency_department,yes,4,General Clinical Services,EMD - Emergency Services,,2026-11-09
+CS061,intensive_care,yes,4,General Clinical Services,ICU - Intensive Care Services,,2026-11-09
+CS062,growth_monitoring,yes,4,Maternity home,Growth monitoring,,2026-11-09
+CS063,growth_monitoring,yes,4,Mobile Nursing Service,Growth monitoring,Same name as CS062,2026-11-09
+CS064,growth_monitoring,yes,4,Nursing and Maternity Home Services,Growth monitoring,Same name as CS062,2026-11-09
+CS065,dentures,yes,5,Oral Health Service (Dental Services),Dental Laboratory Services (Prosthesis),,2026-11-09
+CS066,dental_emergency,yes,5,Oral Health Service (Dental Services),Emergency Dental Services,,2026-11-09
+CS067,dental_fillings,yes,5,Oral Health Service (Dental Services),Restoration,,2026-11-09
+CS068,dental_scaling,yes,5,Oral Health Service (Dental Services),Scaling,,2026-11-09
+CS069,dental_surgery,yes,5,Oral Health Service (Dental Services),Surgical Intervetion,,2026-11-09
