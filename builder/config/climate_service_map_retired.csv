@@ -59,3 +59,4 @@ CS066,dental_emergency,yes,5,Oral Health Service (Dental Services),Emergency Den
 CS067,dental_fillings,yes,5,Oral Health Service (Dental Services),Restoration,,2026-11-09
 CS068,dental_scaling,yes,5,Oral Health Service (Dental Services),Scaling,,2026-11-09
 CS069,dental_surgery,yes,5,Oral Health Service (Dental Services),Surgical Intervetion,,2026-11-09
+CS047,maternal_newborn_care,yes,2,Reproductive and Child Health Care Services,Maternal and Newborn Care,Dropped by the API in the evening of 2026-11-09,2026-11-09
