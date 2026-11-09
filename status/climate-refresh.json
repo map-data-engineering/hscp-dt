@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-09T13:38:40Z",
+  "checked_at": "2026-11-09T15:21:22Z",
   "published_now": true,
-  "latest_bundle_version": 2026110902,
-  "source_checksum": "bfe0550c1608ad2e74c587395f89221bc4b20154e91f74bae4f993ffd95d0ae3",
-  "api_facilities": 6797,
-  "bundle_facilities": 6779,
+  "latest_bundle_version": 2026110903,
+  "source_checksum": "14c89dd7f5a8126ccd36586b0462bd0745499582ad9d418e798caaa4f7c678b6",
+  "api_facilities": 6337,
+  "bundle_facilities": 6319,
   "excluded": {
     "facilities_without_region": 18,
     "service_rows_excluded_tier": 0,
